@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".movies.addEdit.AddEditFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageTicket"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:clickable="false"
+            android:contentDescription="@string/title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_no_camera"
+            android:adjustViewBounds="true"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:scrollbars="none"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_span="2"
+            android:layout_column="0"/>
+
+
+
+        <TextView
+            android:id="@+id/view_vote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_6dp"
+            android:drawablePadding="5dp"
+            android:gravity="end|center_vertical"
+            android:paddingLeft="@dimen/default_5dp"
+            android:paddingRight="@dimen/default_5dp"
+            android:paddingBottom="@dimen/default_3dp"
+            android:singleLine="true"
+            android:text="@string/vote_count"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="italic|bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_8dp"
+            android:layout_marginTop="@dimen/default_8dp"
+            android:layout_marginEnd="@dimen/default_8dp"
+            android:maxLines="1"
+            android:minWidth="100dp"
+            android:scrollbars="horizontal"
+            app:hintAnimationEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageTicket">
+
+            <EditText
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/title"
+                android:inputType="none"
+                android:scrollbars="horizontal"
+
+                tools:ignore="Autofill" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textPopularity"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_8dp"
+            android:layout_marginTop="@dimen/default_8dp"
+            android:maxLines="1"
+            android:scrollbars="vertical"
+            app:hintAnimationEnabled="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textTitle"
+            >
+
+            <EditText
+                android:id="@+id/popularity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/popularity"
+                android:inputType="numberSigned|numberDecimal"
+                android:maxLines="1"
+                android:scrollbars="vertical"
+                tools:ignore="Autofill" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textOriginalLanguage"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_8dp"
+            android:maxLines="1"
+            android:minWidth="100dp"
+            android:scrollbars="vertical"
+            app:layout_constraintStart_toEndOf="@+id/textPopularity"
+            app:layout_constraintTop_toTopOf="@+id/textPopularity">
+
+            <EditText
+                android:id="@+id/original_language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/original_language"
+                android:inputType="none|numberDecimal"
+                android:maxLines="1"
+                android:scrollbars="vertical"
+                tools:ignore="Autofill" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textOverview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_8dp"
+            android:layout_marginTop="@dimen/default_8dp"
+            android:layout_marginEnd="@dimen/default_8dp"
+            android:maxLines="1"
+            android:scrollbars="vertical"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textPopularity">
+
+            <EditText
+                android:id="@+id/overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/overview"
+                android:inputType="text|textCapCharacters"
+                android:maxLines="1"
+                android:scrollbars="vertical"
+                tools:ignore="Autofill" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
